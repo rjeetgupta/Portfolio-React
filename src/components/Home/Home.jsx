@@ -11,7 +11,7 @@ function Home() {
             Ranjeet Gupta
           </h1>
           <p className="text-3xl text-blue-300 mb-8 font-light">
-            MCA Student | Aspiring Developer | Cybersecurity Enthusiast
+            MCA Student | Aspiring Developer
           </p>
         </section>
 
