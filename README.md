@@ -26,7 +26,6 @@ Welcome to my personal portfolio website! This project is built using React and 
 - **React Router**: For navigation between different sections of the portfolio.
 - **CSS / Styled Components**: For styling and ensuring a responsive design.
 - **Git / GitHub**: For version control and collaboration.
-- **Node.js**: For any backend functionality (if applicable).
 
 ## Installation
 
