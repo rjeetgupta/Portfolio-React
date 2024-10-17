@@ -1,6 +1,49 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
+import emailjs from '@emailjs/browser'
 
 function Contact() {
+
+  const form = useRef()
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  })
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    })
+  }
+
+  // console.log(import.meta.env.VITE_EMAILJS_PUBLIC_KEY)
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    
+    console.log("Form Data: ", formData);
+
+    emailjs
+      
+      
+      .sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        form.current,
+        {
+          publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+        }
+      )
+      .then((result) => {
+        alert("Message sent successfully!")
+       })
+      .catch((error) => {
+        console.error("Failed to send message: ", error);
+        alert("Failed to send message")
+      });
+  }
+
   return (
     <div className="bg-gradient-to-br from-gray-900 to-black text-white min-h-screen flex items-center justify-center overflow-hidden relative">
       <div className="absolute inset-0 bg-[url('/circuit-pattern.svg')] opacity-5"></div>
@@ -33,19 +76,31 @@ function Contact() {
                 </li>
               </ul>
             </div>
-            <form className="space-y-6">
+            <form
+              ref={form}
+              onSubmit={handleSubmit}
+              className="space-y-6">
               <h2 className="text-3xl font-bold mb-6 text-purple-400">Send a Message</h2>
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-1">Name</label>
-                <input type="text" id="name" name="name" className="w-full bg-gray-700 rounded-lg py-2 px-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500" placeholder="Your Name" />
+                <input
+                  value={formData.name}
+                  onChange={handleChange}
+                  type="text" id="name" name="name" className="w-full bg-gray-700 rounded-lg py-2 px-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500" placeholder="Your Name" />
               </div>
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-1">Email</label>
-                <input type="email" id="email" name="email" className="w-full bg-gray-700 rounded-lg py-2 px-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500" placeholder="your.email@example.com" />
+                <input
+                  value={formData.email}
+                  onChange={handleChange}
+                  type="email" id="email" name="email" className="w-full bg-gray-700 rounded-lg py-2 px-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500" placeholder="your.email@example.com" />
               </div>
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-1">Message</label>
-                <textarea id="message" name="message" rows="4" className="w-full bg-gray-700 rounded-lg py-2 px-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500" placeholder="Your message here..."></textarea>
+                <textarea
+                  value={formData.message}
+                  onChange={handleChange}
+                  id="message" name="message" rows="4" className="w-full bg-gray-700 rounded-lg py-2 px-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500" placeholder="Your message here..."></textarea>
               </div>
               <button type="submit" className="w-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white font-bold py-3 px-4 rounded-lg transition duration-300 hover:from-blue-600 hover:via-purple-600 hover:to-pink-600 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50 transform hover:scale-105">
                 Send Message

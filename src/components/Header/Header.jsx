@@ -54,10 +54,10 @@ function Header() {
 
 {/*  Add this mobile menu right after your button */}
         {isMenuOpen && (
-          <div className="absolute top-16 left-0 w-full bg-gray-900 text-white shadow-lg rounded-lg md:hidden">
+          <div className="absolute top-16 left-0 w-full bg-gray-900 text-white shadow-lg rounded-lg md:hidden mt-3">
             <ul className="flex flex-col items-center space-y-4 py-4">
               <li>
-                <NavLink to="/" className="block text-lg font-medium hover:text-purple-400 transition duration-300" onClick={toggleMenu}>
+                <NavLink to="/" className="block text-lg font-medium hover:text-purple-400 transition duration-300 border" onClick={toggleMenu}>
                   Home
                 </NavLink>
               </li>
