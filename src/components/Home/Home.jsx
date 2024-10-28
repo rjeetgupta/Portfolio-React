@@ -1,6 +1,12 @@
 import React from 'react'
+import {Link} from "react-router-dom"
 
 function Home() {
+
+  const handleResumeClick = () => {
+    window.location.href = "https://drive.google.com/file/d/1lbsGLptnRS7rQvxMInqXg1XoK_-zu5Tv/view?usp=drive_link"
+  }
+
   return (
     <div className="bg-black text-white min-h-screen flex items-center justify-center overflow-hidden relative">
       <div className="absolute inset-0 bg-[url('/circuit-pattern.svg')] opacity-10"></div>
@@ -25,7 +31,9 @@ function Home() {
           <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 shadow-lg shadow-blue-500/50">
             Infiltrate Projects
           </button>
-          <button className="bg-transparent hover:bg-purple-600 text-purple-300 font-semibold hover:text-white py-3 px-6 border border-purple-500 hover:border-transparent rounded-lg transition duration-300 transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50 shadow-lg shadow-purple-500/50">
+          <button
+            onClick={handleResumeClick}
+            className="bg-transparent hover:bg-purple-600 text-purple-300 font-semibold hover:text-white py-3 px-6 border border-purple-500 hover:border-transparent rounded-lg transition duration-300 transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50 shadow-lg shadow-purple-500/50">
             View Resume 
           </button>
         </section>
