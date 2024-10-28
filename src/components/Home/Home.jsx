@@ -5,29 +5,28 @@ function Home() {
     <div className="bg-black text-white min-h-screen flex items-center justify-center overflow-hidden relative">
       <div className="absolute inset-0 bg-[url('/circuit-pattern.svg')] opacity-10"></div>
       <div className="absolute inset-0 bg-gradient-to-br from-purple-900/50 via-blue-900/50 to-black"></div>
-      <main className="container mx-auto px-4 py-16 text-center relative z-10">
-        <section className="mb-12 animate-fade-in-down">
+      <main className="container mx-auto px-4 py-8 text-center relative z-10">
+        <section className="mb-6 animate-fade-in-down">
           <h1 className="text-7xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 animate-text-shimmer">
             Ranjeet Gupta
           </h1>
-          <p className="text-3xl text-blue-300 mb-8 font-light">
+          <p className="text-3xl text-blue-300 mb-2 font-light">
             MCA Student | Aspiring Developer
           </p>
         </section>
 
-        <section className="mb-16 animate-fade-in-up">
+        <section className="mb-8 animate-fade-in-up">
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Welcome to the shadows of the digital realm. Dive into my world of code, where innovation meets the dark web's mystique.
-            Explore the depths of my projects and unravel the complexities of modern tech.
+          Hello! I'm Ranjeet Kumar Gupta, an aspiring Software Engineer with a passion for creating impactful and efficient applications. My focus is on building responsive, scalable solutions, and my projects showcase skills in both frontend and backend development. With a foundation in JavaScript, Python, and Java, and hands-on experience with frameworks like React and Node.js, I'm continuously exploring new technologies to enhance my development toolkit. Take a look around to see how I'm turning my curiosity and skills into projects that solve real-world problems!
           </p>
         </section>
 
-        <section className="flex justify-center space-x-8 mb-16">
+        <section className="flex justify-center space-x-8 mb-10">
           <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 shadow-lg shadow-blue-500/50">
             Infiltrate Projects
           </button>
           <button className="bg-transparent hover:bg-purple-600 text-purple-300 font-semibold hover:text-white py-3 px-6 border border-purple-500 hover:border-transparent rounded-lg transition duration-300 transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50 shadow-lg shadow-purple-500/50">
-            Decrypt Resume
+            View Resume 
           </button>
         </section>
 
