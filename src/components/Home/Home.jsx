@@ -17,13 +17,13 @@ function Home() {
             Ranjeet Gupta
           </h1>
           <p className="text-3xl text-blue-300 mb-2 font-light">
-            MCA Student | Aspiring Developer
+            Software Engineer
           </p>
         </section>
 
         <section className="mb-8 animate-fade-in-up">
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-          Hello! I'm Ranjeet Kumar Gupta, an aspiring Software Engineer with a passion for creating impactful and efficient applications. My focus is on building responsive, scalable solutions, and my projects showcase skills in both frontend and backend development. With a foundation in JavaScript, Python, and Java, and hands-on experience with frameworks like React and Node.js, I'm continuously exploring new technologies to enhance my development toolkit. Take a look around to see how I'm turning my curiosity and skills into projects that solve real-world problems!
+          Hello! I'm Ranjeet Kumar Gupta, an aspiring Software Engineer passionate about building scalable, impactful applications. With expertise in JavaScript, Python, and Java, along with frameworks like React and Node.js, I specialize in both frontend and backend development. I'm constantly exploring new technologies to create innovative solutions to real-world challenges!
           </p>
         </section>
 
