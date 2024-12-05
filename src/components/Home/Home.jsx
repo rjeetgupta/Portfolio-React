@@ -4,7 +4,7 @@ import {Link} from "react-router-dom"
 function Home() {
 
   const handleResumeClick = () => {
-    window.location.href = "https://drive.google.com/file/d/1lbsGLptnRS7rQvxMInqXg1XoK_-zu5Tv/view?usp=drive_link"
+    window.location.href = "https://drive.google.com/file/d/1lgS4Uz-D9wSOwObkC4MMnR-JYUMrwa6G/view?usp=drive_link"
   }
 
   return (
@@ -28,9 +28,9 @@ function Home() {
         </section>
 
         <section className="flex justify-center space-x-8 mb-10">
-          <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 shadow-lg shadow-blue-500/50">
+          {/* <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 shadow-lg shadow-blue-500/50">
             Infiltrate Projects
-          </button>
+          </button> */}
           <button
             onClick={handleResumeClick}
             className="bg-transparent hover:bg-purple-600 text-purple-300 font-semibold hover:text-white py-3 px-6 border border-purple-500 hover:border-transparent rounded-lg transition duration-300 transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50 shadow-lg shadow-purple-500/50">
@@ -39,7 +39,7 @@ function Home() {
         </section>
 
         <section className="animate-pulse">
-          <p className="text-lg text-blue-300 mb-4">Venture Deeper</p>
+          {/* <p className="text-lg text-blue-300 mb-4">Venture Deeper</p> */}
           <div className="animate-bounce">
             <svg className="w-6 h-6 mx-auto text-blue-300" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
               <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
