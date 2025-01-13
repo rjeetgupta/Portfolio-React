@@ -42,6 +42,12 @@ function Contact() {
         console.error("Failed to send message: ", error);
         alert("Failed to send message")
       });
+
+      setFormData({
+        name: '',
+        email: '',
+        message: ''
+      })
   }
 
   return (
