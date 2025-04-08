@@ -1,55 +1,50 @@
-import React from 'react'
-import {Link} from "react-router-dom"
+import React from "react";
+import { FiGithub, FiLinkedin, FiMail, FiTwitter } from "react-icons/fi";
 
-function Home() {
-
-  const handleResumeClick = () => {
-    window.location.href = "https://drive.google.com/file/d/1lgS4Uz-D9wSOwObkC4MMnR-JYUMrwa6G/view?usp=drive_link"
-  }
-
+const Home = () => {
   return (
-    <div className="bg-black text-white min-h-screen flex items-center justify-center overflow-hidden relative">
-      <div className="absolute inset-0 bg-[url('/circuit-pattern.svg')] opacity-10"></div>
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/50 via-blue-900/50 to-black"></div>
-      <main className="container mx-auto px-4 py-8 text-center relative z-10">
-        <section className="mb-6 animate-fade-in-down">
-          <h1 className="text-7xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 animate-text-shimmer">
-            Ranjeet Gupta
-          </h1>
-          <p className="text-3xl text-blue-300 mb-2 font-light">
-            Software Engineer
-          </p>
-        </section>
+    <section id="home" className="pt-40 pb-28 px-6 bg-gray-950">
+      <div className="max-w-4xl mx-auto text-center">
+        <span className="inline-block mb-4 text-blue-400  font-mono text-2xl tracking-wider">
+          SOFTWARE ENGINEER
+        </span>
+        <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+          I build <span className="text-blue-400">scalable solutions</span><br />
+          for the digital world
+        </h1>
+        <p className="text-lg text-gray-400 mb-10 max-w-2xl mx-auto">
+        Passionate about building scalable web applications with modern technologies.
+        Currently completing my Master's in Computer Applications at <span className="font-bold">Marwari College, Ranchi.</span>
+          Specializing in modern web development with React, Node.js, and cloud architectures.
+          Focused on creating clean, efficient code that delivers business value.
+        </p>
 
-        <section className="mb-8 animate-fade-in-up">
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-          Hello! I'm Ranjeet Kumar Gupta, an aspiring Software Engineer passionate about building scalable, impactful applications. With expertise in JavaScript, Python, and Java, along with frameworks like React and Node.js, I specialize in both frontend and backend development. I'm constantly exploring new technologies to create innovative solutions to real-world challenges!
-          </p>
-        </section>
+        <div className="flex justify-center items-center md:justify-center gap-4 m-7">
+          <a href="https://github.com/rjeetgupta" className="text-gray-400 hover:text-white">
+            <FiGithub size={24} />
+          </a>
+          <a href="mailto:ranjeeturd@gmail.com" className="text-gray-400 hover:text-white">
+            <FiMail size={24} />
+          </a>
+          <a href="https://www.linkedin.com/in/rjeetgupta/" className="text-gray-400 hover:text-white">
+            <FiLinkedin size={24} />
+          </a>
+          <a href="https://x.com/rjeetgupta/" className="text-gray-400 hover:text-white">
+            <FiTwitter size={24} />
+          </a>
+        </div>
 
-        <section className="flex justify-center space-x-8 mb-10">
-          {/* <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 shadow-lg shadow-blue-500/50">
-            Infiltrate Projects
-          </button> */}
-          <button
-            onClick={handleResumeClick}
-            className="bg-transparent hover:bg-purple-600 text-purple-300 font-semibold hover:text-white py-3 px-6 border border-purple-500 hover:border-transparent rounded-lg transition duration-300 transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50 shadow-lg shadow-purple-500/50">
-            View Resume 
+        <div className="flex justify-center space-x-4">
+          <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-md font-medium transition-colors">
+            View Projects
           </button>
-        </section>
+          <button className="border border-gray-700 hover:border-gray-600 text-white px-8 py-3 rounded-md font-medium transition-colors">
+            Download CV
+          </button>
+        </div>
+      </div>
+    </section>
+  );
+};
 
-        <section className="animate-pulse">
-          {/* <p className="text-lg text-blue-300 mb-4">Venture Deeper</p> */}
-          <div className="animate-bounce">
-            <svg className="w-6 h-6 mx-auto text-blue-300" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
-              <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-            </svg>
-          </div>
-        </section>
-      </main>
-      <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black to-transparent"></div>
-    </div>
-  )
-}
-
-export default Home
+export default Home;

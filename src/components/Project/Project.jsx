@@ -1,57 +1,100 @@
-import React from 'react'
+import React from "react";
+import { FiExternalLink, FiGithub } from "react-icons/fi";
 
-function Project() {
+const Projects = () => {
+  const projects = [
+    {
+      title: "E-Commerce Platform",
+      description: "Full-stack online store with payment integration and admin dashboard",
+      tags: ["React", "Node.js", "MongoDB"],
+      link: "#",
+      github: "#"
+    },
+    {
+      title: "SaaS Dashboard",
+      description: "Analytics dashboard for business metrics with real-time updates",
+      tags: ["Next.js", "Tailwind", "Firebase"],
+      link: "#",
+      github: "#"
+    },
+    {
+      title: "Mobile Banking App",
+      description: "Secure financial application with biometric authentication",
+      tags: ["React Native", "TypeScript", "AWS"],
+      link: "#",
+      github: "#"
+    },
+    {
+      title: "Portfolio Website",
+      description: "Creative portfolio with 3D elements and animations",
+      tags: ["Three.js", "GSAP", "React"],
+      link: "#",
+      github: "#"
+    },
+    {
+      title: "Task Management App",
+      description: "Collaborative task management with real-time sync",
+      tags: ["Vue.js", "Firebase", "Tailwind"],
+      link: "#",
+      github: "#"
+    },
+    {
+      title: "Fitness Tracker",
+      description: "Workout tracking and progress visualization",
+      tags: ["React", "Chart.js", "Node.js"],
+      link: "#",
+      github: "#"
+    }
+  ];
+
+  // Duplicate the projects array to create seamless infinite scroll
+  const duplicatedProjects = [...projects, ...projects, ...projects];
+
   return (
-    <div className="bg-black text-white min-h-screen flex items-center justify-center overflow-hidden relative">
-      <div className="absolute inset-0 bg-[url('/circuit-pattern.svg')] opacity-10"></div>
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/50 via-blue-900/50 to-black"></div>
-      <main className="container mx-auto px-4 py-16 relative z-10">
-        <h1 className="text-5xl font-bold mb-12 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600">
-          My Projects
-        </h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {[
-            { 
-              title: "Blog Website", 
-              description: "A dynamic blog platform with user authentication and content management.",
-              github: "https://github.com/yourusername/blog-website",
-              live: "https://your-blog-website.com",
-              image: "/images/blog-website.jpg"
-            },
-            { 
-              title: "News Website", 
-              description: "Real-time news aggregator with customizable categories and search functionality.",
-              github: "https://github.com/yourusername/news-website",
-              live: "https://your-news-website.com",
-              image: "/images/news-website.jpg"
-            },
-            { 
-              title: "ShadowNet Website", 
-              description: "A cybersecurity-themed website showcasing dark web concepts and security measures.",
-              github: "https://github.com/yourusername/shadownet-website",
-              live: "https://your-shadownet-website.com",
-              image: "/images/shadownet-website.jpg"
-            }
-          ].map((project, index) => (
-            <div key={index} className="bg-gray-800 rounded-lg p-6 shadow-md hover:shadow-cyan-500/30 transition duration-300">
-              <img src={project.image} alt={project.title} className="w-full h-48 object-cover rounded-lg mb-4" />
-              <h2 className="text-2xl font-semibold mb-4 text-cyan-400">{project.title}</h2>
-              <p className="text-gray-300 mb-6">{project.description}</p>
-              <div className="flex justify-between">
-                <a href={project.github} target="_blank" rel="noopener noreferrer" className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded transition duration-300">
-                  GitHub
-                </a>
-                <a href={project.live} target="_blank" rel="noopener noreferrer" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300">
-                  Live Demo
-                </a>
-              </div>
-            </div>
-          ))}
+    <section id="projects" className="py-28 px-6 bg-gray-950 overflow-hidden">
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center mb-20">
+          <h2 className="text-3xl font-bold text-white mb-4">
+            Selected <span className="text-blue-400">Projects</span>
+          </h2>
+          <p className="text-gray-400 max-w-2xl mx-auto">
+            A curated selection of my most impactful work
+          </p>
         </div>
-      </main>
-      <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black to-transparent"></div>
-    </div>
-  )
-}
 
-export default Project
+        <div className="relative">
+          <div className="flex overflow-x-hidden py-4">
+            <div className="flex animate-scroll hover:[animation-play-state:paused] whitespace-nowrap">
+              {duplicatedProjects.map((project, index) => (
+                <div key={index} className="inline-block mx-4 w-80 flex-shrink-0 bg-gray-900 border border-gray-800 rounded-lg overflow-hidden hover:border-gray-700 transition-colors">
+                  <div className="h-48 bg-gradient-to-br from-gray-800 to-gray-900"></div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-medium text-white mb-2">{project.title}</h3>
+                    <p className="text-gray-400 mb-4">{project.description}</p>
+                    <div className="flex flex-wrap gap-2 mb-6">
+                      {project.tags.map((tag, i) => (
+                        <span key={i} className="text-xs text-blue-400 bg-blue-400/10 px-3 py-1 rounded-full">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    <div className="flex space-x-4">
+                      <a href={project.link} className="text-gray-400 hover:text-white flex items-center text-sm">
+                        <FiExternalLink className="mr-1" /> Live Demo
+                      </a>
+                      <a href={project.github} className="text-gray-400 hover:text-white flex items-center text-sm">
+                        <FiGithub className="mr-1" /> Code
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Projects;

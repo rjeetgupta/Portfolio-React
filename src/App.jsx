@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import Header from './components/Header/Header.jsx'
+import Navbar from './components/Navbar/Navbar.jsx'
 import Home from './components/Home/Home.jsx'
 import About from './components/About/About.jsx'
 import Project from './components/Project/Project.jsx'
@@ -13,7 +13,7 @@ function App() {
 
   return (
     <>
-      <Header />
+      <Navbar />
       <Home />
       <About />
       <Project />
