@@ -2,6 +2,13 @@ import React from "react";
 import { FiGithub, FiLinkedin, FiMail, FiTwitter } from "react-icons/fi";
 
 const Home = () => {
+
+  const handleOnClick = (e) => {
+    e.preventDefault();
+    window.open("https://drive.google.com/file/d/1AY4G8GV441jrrbV2X-RbZpqbqORnMFON/view?usp=sharing", "_blank");
+  }
+
+
   return (
     <section id="home" className="pt-40 pb-28 px-6 bg-gray-950">
       <div className="max-w-4xl mx-auto text-center">
@@ -38,7 +45,9 @@ const Home = () => {
           <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-md font-medium transition-colors">
             View Projects
           </button>
-          <button className="border border-gray-700 hover:border-gray-600 text-white px-8 py-3 rounded-md font-medium transition-colors">
+          <button
+            onClick={handleOnClick}
+            className="border border-gray-700 hover:border-gray-600 text-white px-8 py-3 rounded-md font-medium transition-colors">
             Download CV
           </button>
         </div>
