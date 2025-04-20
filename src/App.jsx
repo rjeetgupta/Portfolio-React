@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import './App.css'
 import Navbar from './components/Navbar/Navbar.jsx'
 import Home from './components/Home/Home.jsx'
@@ -7,6 +6,7 @@ import Project from './components/Project/Project.jsx'
 import Skill from './components/Skill/Skill.jsx'
 import Contact from './components/Contact/Contact.jsx'
 import Footer from './components/Footer/Footer.jsx'
+import { ToastContainer } from "react-toastify"
 
 function App() {
 
@@ -20,6 +20,7 @@ function App() {
       <Skill />
       <Contact />
       <Footer />
+      <ToastContainer />
     </>
   )
 }
