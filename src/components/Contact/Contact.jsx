@@ -3,11 +3,11 @@ import { FiMail, FiMapPin } from "react-icons/fi";
 
 const Contact = () => {
 
-  const [formdata, setFormData] = useState({
+  const [formData, setFormData] = useState({
     name: "",
     email: "",
     subject: "",
-    message: ""
+    message: "",
   })
 
   const handleOnChange = (e) => {
@@ -18,16 +18,11 @@ const Contact = () => {
     }))
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formdata)
-    setFormData({
-      name: "",
-      email: "",
-      subject: "",
-      message: ""
-    })
   }
+
+
 
   return (
     <section id="contact" className="py-16 px-6 bg-gray-900">
@@ -74,7 +69,7 @@ const Contact = () => {
                   type="text"
                   id="name"
                   name="name"
-                  value={formdata.name}
+                  value={formData.name}
                   onChange={handleOnChange}
                   className="w-full bg-gray-800 border border-gray-700 rounded-md px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
@@ -85,7 +80,7 @@ const Contact = () => {
                   type="email"
                   id="email"
                   name="email"
-                  value={formdata.email}
+                  value={formData.email}
                   onChange={handleOnChange}
                   className="w-full bg-gray-800 border border-gray-700 rounded-md px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
@@ -97,7 +92,7 @@ const Contact = () => {
                 type="text"
                 id="subject"
                 name="subject"
-                value={formdata.subject}
+                value={formData.subject}
                 onChange={handleOnChange}
                 className="w-full bg-gray-800 border border-gray-700 rounded-md px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
@@ -107,7 +102,7 @@ const Contact = () => {
               <textarea
                 id="message"
                 name="message"
-                value={formdata.message}
+                value={formData.message}
                 onChange={handleOnChange}
                 rows="3"
                 className="w-full bg-gray-800 border border-gray-700 rounded-md px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"

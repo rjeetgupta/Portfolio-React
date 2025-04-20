@@ -21,8 +21,8 @@ const Home = () => {
         </h1>
         <p className="text-lg text-gray-400 mb-10 max-w-2xl mx-auto">
         Passionate about building scalable web applications with modern technologies.
-        Currently completing my Master's in Computer Applications at <span className="font-bold">Marwari College, Ranchi.</span>
-          Specializing in modern web development with React, Node.js, and cloud architectures.
+        Currently completing my Master's in Computer Applications at <span className="font-bold">Marwari College, Ranchi. </span>
+           Specializing in modern web development with React, Node.js, and cloud architectures.
           Focused on creating clean, efficient code that delivers business value.
         </p>
 
